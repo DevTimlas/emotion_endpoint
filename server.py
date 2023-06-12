@@ -7,9 +7,9 @@ from tensorflow.keras.models import model_from_json
 
 app = FastAPI()
 
-face_cascade = cv2.CascadeClassifier("/home/tim/Downloads/emotion_detect/haarcascade_frontalface_default.xml")
-model_json_file = '/home/tim/Downloads/emotion_detect/model.json'
-model_weights_file = '/home/tim/Downloads/emotion_detect/model_weights.h5'
+face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+model_json_file = 'model.json'
+model_weights_file = 'model_weights.h5'
 with open(model_json_file, "r") as json_file:
     loaded_model_json = json_file.read()
     loaded_model = model_from_json(loaded_model_json)
@@ -47,7 +47,3 @@ async def websocket_endpoint(websocket: WebSocket):
     except WebSocketDisconnect:
         cv2.destroyWindow("frame")
         print("Client disconnected")
-
-if __name__ == '__main__':
-    uvicorn.run(app, host="0.0.0.0", port=5000)
-
