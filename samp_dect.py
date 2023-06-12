@@ -3,7 +3,7 @@ import cv2
 from tensorflow.keras.models import model_from_json
 
 from fastapi import FastAPI, File, UploadFile
-from PIL import Image
+# from PIL import Image
 import io
 import uvicorn
 
