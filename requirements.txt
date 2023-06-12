@@ -2,3 +2,4 @@ tensorflow==2.4.1
 opencv-python==4.5.3.56
 fastapi
 uvicorn
+typing_extensions==4.4.0
