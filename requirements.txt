@@ -5,3 +5,4 @@ uvicorn
 typing_extensions==4.4.0
 protobuf==3.20
 websockets
+python-multipart
