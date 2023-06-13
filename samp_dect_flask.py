@@ -3,7 +3,7 @@ import cv2
 from tensorflow.keras.models import model_from_json
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from PIL import Image
+# from PIL import Image
 import io
 
 app = Flask(__name__)
